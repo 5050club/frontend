@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #047857; /* default green */
+  --card-bg: #ffffff;
+  --muted: #6b7280;
+}
+
+.theme-team {
+  --accent: #047857;
+}
+
+.theme-neutral {
+  --accent: #374151;
+}
+
+@layer base {
+  body {
+    background-color: #f9fafb; /* neutral light background (was bg-gray-50) */
+    color: #111827; /* default text color (was text-gray-900) */
+    transition: background-color 200ms ease, color 200ms ease;
+  }
+}
+
+/* subtle animation utilities */
+.fade-transition {
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.logo-hover {
+  transition: transform 180ms ease;
+}
+.logo-hover:hover {
+  transform: scale(1.05);
+}
+
+.collapse-transition {
+  transition: max-height 220ms ease, opacity 220ms ease, transform 220ms ease;
+}
